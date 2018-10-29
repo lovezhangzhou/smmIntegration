@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzl.dao.TaDao">
+<select id="selectTaByPage" resultType="Ta">
+    SELECT tid,tname from t_ta limit #{startPos},#{pageSize}
+</select>
+
+    <select id="getTaCount" resultType="long">
+        SELECT COUNT(*) FROM t_ta
+    </select>
+    
+</mapper>

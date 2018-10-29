@@ -1,0 +1,1669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="flight_db@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="db_book"/>
+    <schema id="3" parent="1" name="db_news"/>
+    <schema id="4" parent="1" name="db_petshop"/>
+    <schema id="5" parent="1" name="db_testmaven"/>
+    <schema id="6" parent="1" name="db_user"/>
+    <schema id="7" parent="1" name="flight_db">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="tap_water"/>
+    <schema id="11" parent="1" name="test"/>
+    <table id="12" parent="7" name="f_admin"/>
+    <table id="13" parent="7" name="f_admin_log"/>
+    <table id="14" parent="7" name="f_admin_role"/>
+    <table id="15" parent="7" name="f_air_route"/>
+    <table id="16" parent="7" name="f_aircompanyt_basic_data"/>
+    <table id="17" parent="7" name="f_aircraft_basic_data"/>
+    <table id="18" parent="7" name="f_airline_company"/>
+    <table id="19" parent="7" name="f_airport_basic_data"/>
+    <table id="20" parent="7" name="f_backup"/>
+    <table id="21" parent="7" name="f_channel_basic_data"/>
+    <table id="22" parent="7" name="f_checkin_basic_data"/>
+    <table id="23" parent="7" name="f_collection"/>
+    <table id="24" parent="7" name="f_flight_record"/>
+    <table id="25" parent="7" name="f_flight_report_day"/>
+    <table id="26" parent="7" name="f_flight_report_monthly"/>
+    <table id="27" parent="7" name="f_flight_report_quarter"/>
+    <table id="28" parent="7" name="f_flight_report_weekly"/>
+    <table id="29" parent="7" name="f_flight_report_year"/>
+    <table id="30" parent="7" name="f_flight_stream"/>
+    <table id="31" parent="7" name="f_gate_basic_data"/>
+    <table id="32" parent="7" name="f_menu"/>
+    <table id="33" parent="7" name="f_passenger"/>
+    <table id="34" parent="7" name="f_reason_basic_data"/>
+    <table id="35" parent="7" name="f_rec_basic_data"/>
+    <table id="36" parent="7" name="f_runway_basic_data"/>
+    <table id="37" parent="7" name="f_seat_basic_data"/>
+    <table id="38" parent="7" name="f_statel_basic_data"/>
+    <table id="39" parent="7" name="f_statistics_basic_data"/>
+    <table id="40" parent="7" name="f_task_basic_data"/>
+    <table id="41" parent="7" name="f_terminal_basic_data"/>
+    <table id="42" parent="7" name="f_turntable_basic_data"/>
+    <column id="43" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="44" parent="12" name="code">
+      <Position>2</Position>
+      <Comment>编号</Comment>
+      <DataType>VARCHAR(11)|12</DataType>
+    </column>
+    <column id="45" parent="12" name="username">
+      <Position>3</Position>
+      <Comment>用户账号</Comment>
+      <DataType>VARCHAR(15)|12</DataType>
+    </column>
+    <column id="46" parent="12" name="password">
+      <Position>4</Position>
+      <Comment>用户密码</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="47" parent="12" name="name">
+      <Position>5</Position>
+      <Comment>名称</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="48" parent="12" name="sex">
+      <Position>6</Position>
+      <Comment>0保密1男2女</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="49" parent="12" name="age">
+      <Position>7</Position>
+      <Comment>年龄</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+    </column>
+    <column id="50" parent="12" name="post">
+      <Position>8</Position>
+      <Comment>职务</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="51" parent="12" name="qq">
+      <Position>9</Position>
+      <Comment>QQ</Comment>
+      <DataType>VARCHAR(13)|12</DataType>
+    </column>
+    <column id="52" parent="12" name="tel">
+      <Position>10</Position>
+      <Comment>联系电话</Comment>
+      <DataType>VARCHAR(13)|12</DataType>
+    </column>
+    <column id="53" parent="12" name="email">
+      <Position>11</Position>
+      <Comment>邮箱</Comment>
+      <DataType>VARCHAR(15)|12</DataType>
+    </column>
+    <column id="54" parent="12" name="other">
+      <Position>12</Position>
+      <Comment>其它联系方式</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="55" parent="12" name="role_id">
+      <Position>13</Position>
+      <Comment>角色ID</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="56" parent="12" name="state">
+      <Position>14</Position>
+      <Comment>账号状态1正常0停用</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="57" parent="12" name="add_time">
+      <Position>15</Position>
+      <Comment>添加时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="58" parent="12" name="login_time">
+      <Position>16</Position>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="59" parent="12" name="remark">
+      <Position>17</Position>
+      <Comment>备注</Comment>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <key id="60" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="61" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="13" name="username">
+      <Position>2</Position>
+      <Comment>用户账号</Comment>
+      <DataType>VARCHAR(15)|12</DataType>
+    </column>
+    <column id="63" parent="13" name="name">
+      <Position>3</Position>
+      <Comment>名称</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="64" parent="13" name="role_id">
+      <Position>4</Position>
+      <Comment>角色ID</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="65" parent="13" name="cotent">
+      <Position>5</Position>
+      <Comment>日志信息</Comment>
+      <DataType>VARCHAR(200)|12</DataType>
+    </column>
+    <column id="66" parent="13" name="type">
+      <Position>6</Position>
+      <Comment>日志类型</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="67" parent="13" name="add_time">
+      <Position>7</Position>
+      <Comment>添加时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="68" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="70" parent="14" name="name">
+      <Position>2</Position>
+      <Comment>名称</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="71" parent="14" name="menu_id">
+      <Position>3</Position>
+      <Comment>权限控制</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="72" parent="14" name="add_time">
+      <Position>4</Position>
+      <Comment>添加时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="73" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="74" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="15" name="airport_start">
+      <Position>2</Position>
+      <Comment>起飞机场</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="76" parent="15" name="airport_end">
+      <Position>3</Position>
+      <Comment>降落机场</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="77" parent="15" name="airport_end_spare">
+      <Position>4</Position>
+      <Comment>备降机场</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="78" parent="15" name="mileage">
+      <Position>5</Position>
+      <Comment>里程</Comment>
+      <DataType>DECIMAL(11,2)|3</DataType>
+      <DefaultExpression>0.00</DefaultExpression>
+    </column>
+    <column id="79" parent="15" name="add_time">
+      <Position>6</Position>
+      <Comment>添加时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="80" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="81" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="82" parent="16" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="83" parent="16" name="en_abb">
+      <Position>3</Position>
+      <Comment>英文简称</Comment>
+      <DataType>CHAR(10)|1</DataType>
+    </column>
+    <column id="84" parent="16" name="name">
+      <Position>4</Position>
+      <Comment>航空公司名称</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="85" parent="16" name="branch_name">
+      <Position>5</Position>
+      <Comment>分公司名称</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="86" parent="16" name="two_code">
+      <Position>6</Position>
+      <Comment>航空公司二字码</Comment>
+      <DataType>CHAR(5)|1</DataType>
+    </column>
+    <column id="87" parent="16" name="three_code">
+      <Position>7</Position>
+      <Comment>航空公司三字码</Comment>
+      <DataType>CHAR(6)|1</DataType>
+    </column>
+    <column id="88" parent="16" name="attribute">
+      <Position>8</Position>
+      <Comment>航空公司属性 国内或国外</Comment>
+      <DataType>CHAR(5)|1</DataType>
+    </column>
+    <column id="89" parent="16" name="tel">
+      <Position>9</Position>
+      <Comment>联系电话</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="90" parent="16" name="linkman">
+      <Position>10</Position>
+      <Comment>联系人</Comment>
+      <DataType>CHAR(10)|1</DataType>
+    </column>
+    <column id="91" parent="16" name="linkman_post">
+      <Position>11</Position>
+      <Comment>联系人职务</Comment>
+      <DataType>CHAR(20)|1</DataType>
+    </column>
+    <column id="92" parent="16" name="first_time">
+      <Position>12</Position>
+      <Comment>首飞时间</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="16" name="email">
+      <Position>13</Position>
+      <Comment>邮箱</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <key id="94" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="95" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="96" parent="17" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="97" parent="17" name="no">
+      <Position>3</Position>
+      <Comment>机号</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="98" parent="17" name="model">
+      <Position>4</Position>
+      <Comment>机型</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="99" parent="17" name="company">
+      <Position>5</Position>
+      <Comment>所属航空公司</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="100" parent="17" name="attribute">
+      <Position>6</Position>
+      <Comment>航空公司属性 国内或国外</Comment>
+      <DataType>CHAR(5)|1</DataType>
+    </column>
+    <column id="101" parent="17" name="two_code">
+      <Position>7</Position>
+      <Comment>航空公司二字码</Comment>
+      <DataType>CHAR(5)|1</DataType>
+    </column>
+    <column id="102" parent="17" name="wingspan">
+      <Position>8</Position>
+      <Comment>翼展</Comment>
+      <DataType>DECIMAL(6,2)|3</DataType>
+    </column>
+    <column id="103" parent="17" name="length">
+      <Position>9</Position>
+      <Comment>长度</Comment>
+      <DataType>DECIMAL(6,2)|3</DataType>
+    </column>
+    <column id="104" parent="17" name="height">
+      <Position>10</Position>
+      <Comment>高度</Comment>
+      <DataType>DECIMAL(6,2)|3</DataType>
+    </column>
+    <column id="105" parent="17" name="max_seat">
+      <Position>11</Position>
+      <Comment>实际最大座位数</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="106" parent="17" name="cargo">
+      <Position>12</Position>
+      <Comment>载货量</Comment>
+      <DataType>DECIMAL(8,2)|3</DataType>
+    </column>
+    <column id="107" parent="17" name="takeoff_weight">
+      <Position>13</Position>
+      <Comment>最大起飞重量</Comment>
+      <DataType>DECIMAL(10,2)|3</DataType>
+    </column>
+    <column id="108" parent="17" name="max_range">
+      <Position>14</Position>
+      <Comment>最大航程</Comment>
+      <DataType>DECIMAL(10,2)|3</DataType>
+    </column>
+    <column id="109" parent="17" name="max_fuel">
+      <Position>15</Position>
+      <Comment>最大燃油容量</Comment>
+      <DataType>DECIMAL(10,2)|3</DataType>
+    </column>
+    <column id="110" parent="17" name="runway">
+      <Position>16</Position>
+      <Comment>跑道要求</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="111" parent="17" name="aircraft_type">
+      <Position>17</Position>
+      <Comment>飞机类型</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <key id="112" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="113" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="114" parent="18" name="airline_company">
+      <Position>2</Position>
+      <Comment>航空公司</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="115" parent="18" name="add_time">
+      <Position>3</Position>
+      <Comment>添加时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="116" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="117" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="118" parent="19" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="119" parent="19" name="name">
+      <Position>3</Position>
+      <Comment>机场名称</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="120" parent="19" name="route_abb">
+      <Position>4</Position>
+      <Comment>航线简称</Comment>
+      <DataType>CHAR(6)|1</DataType>
+    </column>
+    <column id="121" parent="19" name="en_abb">
+      <Position>5</Position>
+      <Comment>英文简称</Comment>
+      <DataType>CHAR(6)|1</DataType>
+    </column>
+    <column id="122" parent="19" name="attribute">
+      <Position>6</Position>
+      <Comment>航空公司属性 国内或国外</Comment>
+      <DataType>CHAR(6)|1</DataType>
+    </column>
+    <column id="123" parent="19" name="three_code">
+      <Position>7</Position>
+      <Comment>机场三字码</Comment>
+      <DataType>CHAR(10)|1</DataType>
+    </column>
+    <column id="124" parent="19" name="four_code">
+      <Position>8</Position>
+      <Comment>机场四字码</Comment>
+      <DataType>CHAR(10)|1</DataType>
+    </column>
+    <column id="125" parent="19" name="city">
+      <Position>9</Position>
+      <Comment>机场所属城市</Comment>
+      <DataType>CHAR(12)|1</DataType>
+    </column>
+    <column id="126" parent="19" name="level">
+      <Position>10</Position>
+      <Comment>机场等级</Comment>
+      <DataType>CHAR(6)|1</DataType>
+    </column>
+    <column id="127" parent="19" name="address">
+      <Position>11</Position>
+      <Comment>地址</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="128" parent="19" name="tel">
+      <Position>12</Position>
+      <Comment>联系电话</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="129" parent="19" name="province">
+      <Position>13</Position>
+      <Comment>省份</Comment>
+      <DataType>CHAR(12)|1</DataType>
+    </column>
+    <key id="130" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="131" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="132" parent="20" name="name">
+      <Position>2</Position>
+      <Comment>备份名称</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="133" parent="20" name="add_time">
+      <Position>3</Position>
+      <Comment>操作时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="134" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="135" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="136" parent="21" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="137" parent="21" name="number">
+      <Position>3</Position>
+      <Comment>安检通道编号</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="138" parent="21" name="attribute">
+      <Position>4</Position>
+      <Comment>安检通道属性</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="139" parent="21" name="region">
+      <Position>5</Position>
+      <Comment>对应区域</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="140" parent="21" name="states">
+      <Position>6</Position>
+      <Comment>安检口状态 1开启  2关闭</Comment>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="141" parent="21" name="terminal">
+      <Position>7</Position>
+      <Comment>所属航站楼</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="142" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="143" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="144" parent="22" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="145" parent="22" name="name">
+      <Position>3</Position>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="146" parent="22" name="number">
+      <Position>4</Position>
+      <Comment>值机柜台编号</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="147" parent="22" name="company">
+      <Position>5</Position>
+      <Comment>所属航空公司</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="148" parent="22" name="region">
+      <Position>6</Position>
+      <Comment>对应区域</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="149" parent="22" name="terminal">
+      <Position>7</Position>
+      <Comment>所属航站楼</Comment>
+      <DataType>CHAR(10)|1</DataType>
+    </column>
+    <column id="150" parent="22" name="attribute">
+      <Position>8</Position>
+      <Comment>值机柜台属性</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="151" parent="22" name="states">
+      <Position>9</Position>
+      <Comment>状态 1开启 0关闭</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="152" parent="22" name="type">
+      <Position>10</Position>
+      <Comment>类别</Comment>
+      <DataType>CHAR(6)|1</DataType>
+    </column>
+    <key id="153" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="154" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="155" parent="23" name="name">
+      <Position>2</Position>
+      <Comment>API名称</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="156" parent="23" name="Url">
+      <Position>3</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <key id="157" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="158" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="159" parent="24" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="160" parent="24" name="do_date">
+      <Position>3</Position>
+      <Comment>航班执行日期</Comment>
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="161" parent="24" name="air_code">
+      <Position>4</Position>
+      <Comment>航空公司代码</Comment>
+      <DataType>CHAR(10)|1</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="162" parent="24" name="flight_no">
+      <Position>5</Position>
+      <Comment>航班号</Comment>
+      <DataType>VARCHAR(15)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="163" parent="24" name="no">
+      <Position>6</Position>
+      <Comment>机号</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="164" parent="24" name="nature">
+      <Position>7</Position>
+      <Comment>航班性</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="165" parent="24" name="task">
+      <Position>8</Position>
+      <Comment>任务性质</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="166" parent="24" name="attribute">
+      <Position>9</Position>
+      <Comment>属性</Comment>
+      <DataType>VARCHAR(8)|12</DataType>
+    </column>
+    <column id="167" parent="24" name="seat">
+      <Position>10</Position>
+      <Comment>机位</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="168" parent="24" name="gate">
+      <Position>11</Position>
+      <Comment>登机口</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="169" parent="24" name="luggage_turntable">
+      <Position>12</Position>
+      <Comment>行李转盘</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="170" parent="24" name="relation_id">
+      <Position>13</Position>
+      <Comment>关联航班ID</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="171" parent="24" name="airline_id">
+      <Position>14</Position>
+      <Comment>航空公司ID</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="172" parent="24" name="airline_company">
+      <Position>15</Position>
+      <Comment>航空公司</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="173" parent="24" name="flight_mission">
+      <Position>16</Position>
+      <Comment>航班任务</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="174" parent="24" name="flight_agent">
+      <Position>17</Position>
+      <Comment>航班代理</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="175" parent="24" name="airport_start">
+      <Position>18</Position>
+      <Comment>起飞机场</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="176" parent="24" name="airport_end">
+      <Position>19</Position>
+      <Comment>降落机场</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="177" parent="24" name="airport_end_spare">
+      <Position>20</Position>
+      <Comment>备降机场</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="178" parent="24" name="adult_num">
+      <Position>21</Position>
+      <Comment>成人数量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="179" parent="24" name="child_num">
+      <Position>22</Position>
+      <Comment>儿童数量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="180" parent="24" name="baby_num">
+      <Position>23</Position>
+      <Comment>婴儿数量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="181" parent="24" name="luggage_num">
+      <Position>24</Position>
+      <Comment>货邮数量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="182" parent="24" name="cargo_weight">
+      <Position>25</Position>
+      <Comment>货邮重量</Comment>
+      <DataType>DECIMAL(11,2)|3</DataType>
+      <DefaultExpression>0.00</DefaultExpression>
+    </column>
+    <column id="183" parent="24" name="plan_take_time">
+      <Position>26</Position>
+      <Comment>计划起飞</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="184" parent="24" name="plan_land_time">
+      <Position>27</Position>
+      <Comment>计划落地</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="185" parent="24" name="real_take_time">
+      <Position>28</Position>
+      <Comment>实际起飞</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="186" parent="24" name="real_land_time">
+      <Position>29</Position>
+      <Comment>实际落地时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="187" parent="24" name="block_time">
+      <Position>30</Position>
+      <Comment>挡轮挡时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="188" parent="24" name="remove_time">
+      <Position>31</Position>
+      <Comment>撤轮挡时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="189" parent="24" name="delay_remark">
+      <Position>32</Position>
+      <Comment>航班延误原因</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="190" parent="24" name="delay_time">
+      <Position>33</Position>
+      <Comment>航班延误时长</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="191" parent="24" name="terminal">
+      <Position>34</Position>
+      <Comment>航站楼</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="192" parent="24" name="door_open_time">
+      <Position>35</Position>
+      <Comment>开舱门时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="193" parent="24" name="door_close_time">
+      <Position>36</Position>
+      <Comment>关舱门时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="194" parent="24" name="cargodoor_open_time">
+      <Position>37</Position>
+      <Comment>开货舱门时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="195" parent="24" name="cargodoor_close_time">
+      <Position>38</Position>
+      <Comment>关货舱门时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="196" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="197" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="198" parent="25" name="day">
+      <Position>2</Position>
+      <Comment>统计标示 哪一天</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="199" parent="25" name="flights">
+      <Position>3</Position>
+      <Comment>航班架次</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="200" parent="25" name="normal_flights">
+      <Position>4</Position>
+      <Comment>正常的数量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="201" parent="25" name="passengers">
+      <Position>5</Position>
+      <Comment>旅客数量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="202" parent="25" name="cargo_weight">
+      <Position>6</Position>
+      <Comment>货邮行重量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="203" parent="25" name="rtype">
+      <Position>7</Position>
+      <Comment>统计类型1进港2出港3过站</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="204" parent="25" name="add_time">
+      <Position>8</Position>
+      <Comment>统计时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="205" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="206" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="207" parent="26" name="day">
+      <Position>2</Position>
+      <Comment>统计标示 哪一天</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="208" parent="26" name="flights">
+      <Position>3</Position>
+      <Comment>航班架次</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="209" parent="26" name="passengers">
+      <Position>4</Position>
+      <Comment>旅客数量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="210" parent="26" name="cargo_weight">
+      <Position>5</Position>
+      <Comment>货邮行重量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="211" parent="26" name="rtype">
+      <Position>6</Position>
+      <Comment>统计类型1进港2出港3过站</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="212" parent="26" name="add_time">
+      <Position>7</Position>
+      <Comment>统计时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="213" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="214" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="215" parent="27" name="day">
+      <Position>2</Position>
+      <Comment>统计标示 哪一天</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="216" parent="27" name="flights">
+      <Position>3</Position>
+      <Comment>航班架次</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="217" parent="27" name="passengers">
+      <Position>4</Position>
+      <Comment>旅客数量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="218" parent="27" name="cargo_weight">
+      <Position>5</Position>
+      <Comment>货邮行重量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="219" parent="27" name="rtype">
+      <Position>6</Position>
+      <Comment>统计类型1进港2出港3过站</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="220" parent="27" name="add_time">
+      <Position>7</Position>
+      <Comment>统计时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="221" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="222" parent="28" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="223" parent="28" name="day">
+      <Position>2</Position>
+      <Comment>统计标示 哪一天</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="224" parent="28" name="flights">
+      <Position>3</Position>
+      <Comment>航班架次</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="225" parent="28" name="passengers">
+      <Position>4</Position>
+      <Comment>旅客数量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="226" parent="28" name="cargo_weight">
+      <Position>5</Position>
+      <Comment>货邮行重量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="227" parent="28" name="rtype">
+      <Position>6</Position>
+      <Comment>统计类型1进港2出港3过站</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="228" parent="28" name="add_time">
+      <Position>7</Position>
+      <Comment>统计时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="229" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="230" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="231" parent="29" name="day">
+      <Position>2</Position>
+      <Comment>统计标示 哪一天</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="232" parent="29" name="flights">
+      <Position>3</Position>
+      <Comment>航班架次</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="233" parent="29" name="passengers">
+      <Position>4</Position>
+      <Comment>旅客数量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="234" parent="29" name="cargo_weight">
+      <Position>5</Position>
+      <Comment>货邮行重量</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="235" parent="29" name="rtype">
+      <Position>6</Position>
+      <Comment>统计类型1进港2出港3过站</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>1</DefaultExpression>
+    </column>
+    <column id="236" parent="29" name="add_time">
+      <Position>7</Position>
+      <Comment>统计时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="237" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="238" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="239" parent="30" name="flight_no">
+      <Position>2</Position>
+      <Comment>航班号</Comment>
+      <DataType>VARCHAR(15)|12</DataType>
+    </column>
+    <column id="240" parent="30" name="airline_id">
+      <Position>3</Position>
+      <Comment>航空公司ID</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="241" parent="30" name="airline_company">
+      <Position>4</Position>
+      <Comment>航空公司</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="242" parent="30" name="plan_take_time">
+      <Position>5</Position>
+      <Comment>计划起飞</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="243" parent="30" name="plan_land_time">
+      <Position>6</Position>
+      <Comment>计划落地</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="244" parent="30" name="real_take_time">
+      <Position>7</Position>
+      <Comment>实际起飞</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="245" parent="30" name="real_land_time">
+      <Position>8</Position>
+      <Comment>实际落地时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="246" parent="30" name="block_time">
+      <Position>9</Position>
+      <Comment>挡轮挡时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="247" parent="30" name="remove_time">
+      <Position>10</Position>
+      <Comment>撤轮挡时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="248" parent="30" name="park">
+      <Position>11</Position>
+      <Comment>停机位</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="249" parent="30" name="bridges_time">
+      <Position>12</Position>
+      <Comment>靠廊桥时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="250" parent="30" name="remove_bridges_time">
+      <Position>13</Position>
+      <Comment>撤廊桥时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="251" parent="30" name="delay_remark">
+      <Position>14</Position>
+      <Comment>航班延误原因</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="252" parent="30" name="delay_time">
+      <Position>15</Position>
+      <Comment>航班延误时长</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="253" parent="30" name="abnormal_remark">
+      <Position>16</Position>
+      <Comment>航班放行不正常原因</Comment>
+      <DataType>VARCHAR(500)|12</DataType>
+    </column>
+    <column id="254" parent="30" name="terminal">
+      <Position>17</Position>
+      <Comment>航站楼</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="255" parent="30" name="gate">
+      <Position>18</Position>
+      <Comment>登机口</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="256" parent="30" name="luggage_turntable">
+      <Position>19</Position>
+      <Comment>行李转盘</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="257" parent="30" name="door_open_time">
+      <Position>20</Position>
+      <Comment>开舱门时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="258" parent="30" name="door_close_time">
+      <Position>21</Position>
+      <Comment>关舱门时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="259" parent="30" name="cargodoor_open_time">
+      <Position>22</Position>
+      <Comment>开货舱门时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="260" parent="30" name="cargodoor_close_time">
+      <Position>23</Position>
+      <Comment>关货舱门时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <key id="261" parent="30" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="262" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="263" parent="31" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="264" parent="31" name="attribute">
+      <Position>3</Position>
+      <Comment>航空公司属性 国内或国外</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="265" parent="31" name="type">
+      <Position>4</Position>
+      <Comment>类型 1近 2远 </Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="266" parent="31" name="channel">
+      <Position>5</Position>
+      <Comment>对应航站楼</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="267" parent="31" name="name">
+      <Position>6</Position>
+      <Comment>登机口名称</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="268" parent="31" name="seat">
+      <Position>7</Position>
+      <Comment>对应机位</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="269" parent="31" name="states">
+      <Position>8</Position>
+      <Comment>登机记状态  1正在登记 2未使用</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="270" parent="31" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="271" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="272" parent="32" name="name">
+      <Position>2</Position>
+      <Comment>栏目名称</Comment>
+      <DataType>VARCHAR(15)|12</DataType>
+    </column>
+    <column id="273" parent="32" name="url">
+      <Position>3</Position>
+      <Comment>栏目路径</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <key id="274" parent="32" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="275" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>INT UNSIGNED(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="276" parent="33" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(11)|12</DataType>
+    </column>
+    <column id="277" parent="33" name="relation_id">
+      <Position>3</Position>
+      <Comment>关联ID 团体购票</Comment>
+      <DataType>INT(10)|4</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="278" parent="33" name="flight_no">
+      <Position>4</Position>
+      <Comment>航班号</Comment>
+      <DataType>VARCHAR(15)|12</DataType>
+    </column>
+    <column id="279" parent="33" name="name">
+      <Position>5</Position>
+      <Comment>姓名</Comment>
+      <DataType>VARCHAR(11)|12</DataType>
+    </column>
+    <column id="280" parent="33" name="id_number">
+      <Position>6</Position>
+      <Comment>身份证号</Comment>
+      <DataType>VARCHAR(25)|12</DataType>
+    </column>
+    <column id="281" parent="33" name="tel">
+      <Position>7</Position>
+      <Comment>电话</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="282" parent="33" name="sex">
+      <Position>8</Position>
+      <Comment>性别</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+    </column>
+    <column id="283" parent="33" name="email">
+      <Position>9</Position>
+      <Comment>邮箱</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="284" parent="33" name="is_vip">
+      <Position>10</Position>
+      <Comment>是否贵宾</Comment>
+      <DataType>TINYINT(3)|-6</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="285" parent="33" name="seat">
+      <Position>11</Position>
+      <Comment>座位号</Comment>
+      <DataType>CHAR(5)|1</DataType>
+    </column>
+    <column id="286" parent="33" name="cabin">
+      <Position>12</Position>
+      <Comment>舱位</Comment>
+      <DataType>CHAR(4)|1</DataType>
+    </column>
+    <column id="287" parent="33" name="voyage">
+      <Position>13</Position>
+      <Comment>航程</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="288" parent="33" name="check_time">
+      <Position>14</Position>
+      <Comment>值机时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="289" parent="33" name="check_counter">
+      <Position>15</Position>
+      <Comment>值机柜台</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="290" parent="33" name="security_time">
+      <Position>16</Position>
+      <Comment>安检时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="291" parent="33" name="security_channel">
+      <Position>17</Position>
+      <Comment>安检通道</Comment>
+      <DataType>CHAR(10)|1</DataType>
+    </column>
+    <column id="292" parent="33" name="boarding_time">
+      <Position>18</Position>
+      <Comment>登机时间</Comment>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="293" parent="33" name="peer">
+      <Position>19</Position>
+      <Comment>同行旅客</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="294" parent="33" name="recent_takeoff_flight">
+      <Position>20</Position>
+      <Comment>最后一次起飞航班号</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="295" parent="33" name="recent_takeoff_time">
+      <Position>21</Position>
+      <Comment>最后一次起飞时间</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="296" parent="33" name="destination">
+      <Position>22</Position>
+      <Comment>目的地</Comment>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="297" parent="33" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="298" parent="34" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="299" parent="34" name="code">
+      <Position>2</Position>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="300" parent="34" name="name">
+      <Position>3</Position>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="301" parent="34" name="en_name">
+      <Position>4</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <key id="302" parent="34" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="303" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="304" parent="35" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="305" parent="35" name="number">
+      <Position>3</Position>
+      <Comment>廊桥编号</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="306" parent="35" name="seat">
+      <Position>4</Position>
+      <Comment>对应机位</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <key id="307" parent="35" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="308" parent="36" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="309" parent="36" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="310" parent="36" name="number">
+      <Position>3</Position>
+      <Comment>跑道编号</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="311" parent="36" name="length">
+      <Position>4</Position>
+      <Comment>跑道长度</Comment>
+      <DataType>DECIMAL(10,2)|3</DataType>
+    </column>
+    <column id="312" parent="36" name="direction">
+      <Position>5</Position>
+      <Comment>跑道方向</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="313" parent="36" name="attribute">
+      <Position>6</Position>
+      <Comment>跑道属性</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <key id="314" parent="36" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="315" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="316" parent="37" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="317" parent="37" name="number">
+      <Position>3</Position>
+      <Comment>停机位编号</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="318" parent="37" name="model">
+      <Position>4</Position>
+      <Comment>可停靠机型</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="319" parent="37" name="attribute">
+      <Position>5</Position>
+      <Comment>机位属性</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="320" parent="37" name="lengt">
+      <Position>6</Position>
+      <Comment>机位长</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="321" parent="37" name="breadth">
+      <Position>7</Position>
+      <Comment>机位宽</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="322" parent="37" name="type">
+      <Position>8</Position>
+      <Comment>机位类型</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="323" parent="37" name="states">
+      <Position>9</Position>
+      <Comment>机位状态 1启用 2关闭</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="324" parent="37" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="325" parent="38" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="326" parent="38" name="code">
+      <Position>2</Position>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="327" parent="38" name="name">
+      <Position>3</Position>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <key id="328" parent="38" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="329" parent="39" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="330" parent="39" name="code">
+      <Position>2</Position>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="331" parent="39" name="name">
+      <Position>3</Position>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <key id="332" parent="39" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="333" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="334" parent="40" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="335" parent="40" name="synopsis">
+      <Position>3</Position>
+      <Comment>任务简称</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="336" parent="40" name="name">
+      <Position>4</Position>
+      <Comment>任务性质</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="337" parent="40" name="en_name">
+      <Position>5</Position>
+      <Comment>英文名称</Comment>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="338" parent="40" name="task_code">
+      <Position>6</Position>
+      <Comment>任务性质代码</Comment>
+      <DataType>CHAR(8)|1</DataType>
+    </column>
+    <column id="339" parent="40" name="rank">
+      <Position>7</Position>
+      <Comment>任务排序</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="340" parent="40" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="341" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="342" parent="41" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="343" parent="41" name="name">
+      <Position>3</Position>
+      <Comment>航站楼名称</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="344" parent="41" name="attribute">
+      <Position>4</Position>
+      <Comment>航站楼属性</Comment>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="345" parent="41" name="company">
+      <Position>5</Position>
+      <Comment>所属航空公司</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="346" parent="41" name="states">
+      <Position>6</Position>
+      <Comment>状态</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="347" parent="41" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="348" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="349" parent="42" name="code">
+      <Position>2</Position>
+      <Comment>记录号</Comment>
+      <DataType>VARCHAR(5)|12</DataType>
+    </column>
+    <column id="350" parent="42" name="states">
+      <Position>3</Position>
+      <Comment>状态</Comment>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="351" parent="42" name="attribute">
+      <Position>4</Position>
+      <Comment>航空公司属性 国内或国外</Comment>
+      <DataType>CHAR(6)|1</DataType>
+    </column>
+    <column id="352" parent="42" name="company">
+      <Position>5</Position>
+      <Comment>所属航空公司</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <column id="353" parent="42" name="number">
+      <Position>6</Position>
+      <Comment>行李转盘编号</Comment>
+      <DataType>VARCHAR(12)|12</DataType>
+    </column>
+    <column id="354" parent="42" name="terminal">
+      <Position>7</Position>
+      <Comment>所属航站楼</Comment>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <key id="355" parent="42" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

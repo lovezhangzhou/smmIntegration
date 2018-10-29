@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--名字空间：这里没有采用Mapper接口代理方式，Mybatis官方建议通过Mapper接口的代理对象访问-->
+<mapper namespace="com.zzl.dao.UserBeanDao">
+    <insert id="addUser" >
+        INSERT INTO t_userb VALUES(null,#{u_name},#{u_pwd},#{u_sex},#{u_age},#{a_ddress})
+    </insert>
+    <!--用户登录查询-->
+    <select id="loginByUser"  resultType="UserBean" >
+       SELECT u_name,u_pwd FROM t_userb WHERE u_name=#{u_name} AND u_pwd=#{u_pwd}
+    </select>
+    <!--u_name,u_pwd  WHERE u_name=#{uName} AND u_pwd=#{uPwd}-->
+    <select id="loginByUser1"  resultType="UserBean" >
+        SELECT * FROM t_userb
+    </select>
+
+    <select id="getTaAll"  resultType="Ta" >
+        SELECT tid,tname FROM t_ta limit 1,2000
+    </select>
+
+
+</mapper>

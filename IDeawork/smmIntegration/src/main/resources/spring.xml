@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--自动扫描：扫描com.zking包下所有类中的注解-->
+    <context:component-scan base-package="com.zzl"/>
+    <!--引入db.properties-->
+    <context:property-placeholder location="classpath:db.properties"/>
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${driver_Class}"></property>
+        <property name="jdbcUrl" value="${url}"></property>
+        <property name="user" value="${uname}"></property>
+        <property name="password" value="${upwd}"></property>
+        <property name="initialPoolSize" value="${initPoolSize}"></property>
+        <property name="maxPoolSize" value="${maxPoolSize}"></property>
+    </bean>
+
+    <!--配置SqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--引入数据源-->
+        <property name="dataSource" ref="dataSource"></property>
+        <!--加载所有映射文件-->
+        <property name="mapperLocations" value="classpath:com/zzl/mapper/*.xml"></property>
+        <!--typeAliasesPackage对应实体类所在的包，这个时候会自动取包名作为别名-->
+        <property name="typeAliasesPackage" value="com.zzl.pojo"></property>
+        <property name="configLocation" value="classpath:mybatisConfig.xml"></property>
+    </bean>
+    <!--配置Dao层：spring注入这个bean-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--将sqlSessionFactory注入com.zking.dao包的类中，dao包中的类直接使用sqlSessionFactory-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+        <property name="basePackage" value="com.zzl.dao"></property>
+    </bean>
+    <!-- 事务管理 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <!--Redis连接配置-->
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="host" value="192.168.43.87"></constructor-arg>
+        <constructor-arg name="port" value="6379"></constructor-arg>
+    </bean>
+
+    <!--RredisCacheBean配置-->
+    <bean id="redisCache" class="com.zzl.util.RedisCache">
+    </bean>
+<!--文件上传配置-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"></property>		<!--//请求的编码格式-->
+        <property name="maxUploadSize" value="102400000"></property>	<!--//文件最大大小(字节) 1024*1024*50=50M-->
+        <property name="resolveLazily" value="true"/>			<!--//resolveLazily属性启用是为了推迟文件解析，以便捕获文件大小异常-->
+    </bean>
+
+
+</beans>
